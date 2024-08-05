@@ -1,0 +1,9 @@
+name: Caller Workflow
+
+on: [push]
+
+jobs:
+  call-reusable-workflow:
+    uses: sujithq/automatic-lamp/.github/workflows/reusable-workflow.yml@main
+    secrets:
+      SECRET_NAME: ${{ secrets.SECRET_NAME }}
